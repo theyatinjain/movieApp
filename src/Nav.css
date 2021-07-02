@@ -1,0 +1,93 @@
+.Nav {
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    z-index: 99;
+}
+
+.Nav>.brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.brand:active,
+.brand:visited,
+.brand:link,
+.brand:hover {
+    color: #fff;
+}
+
+.brand .brand__logo {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.brand .brand__name {
+    font-family: 'Red Hat Display';
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.Nav>.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 30px;
+    list-style: none;
+}
+
+.links>.links__link {
+    font-family: 'Red Hat Display';
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.links>.links__link a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.2s;
+}
+
+.links>.links__link a:link,
+.links>.links__link a:visited,
+.links>.links__link a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+.links>.links__link>a:hover {
+    color: #ed1c23;
+}
+
+@media screen and (max-width: 768px) {
+    .Nav {
+        justify-content: center;
+    }
+
+    .Nav>.brand {
+        margin: 0;
+    }    
+    
+    .Nav>.links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .brand .brand__logo {
+        max-height: 40px;
+    }
+    .brand .brand__name {
+        font-size: 28px;
+    }
+}
